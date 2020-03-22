@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game Statistics</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    
+    <link rel="stylesheet" href="../static/styles.css">
+</head>
+<body>
+
+    
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-12 jumbotron text-center">
+                            <h1><i>Covid XXIX: Stats, Effects in India</i></h1>
+                            <p><u>Explore the State Wise Analysis</u></p>
+                        </div>
+                </div>
+				<h5><p>These Bars show Home vs.Away team performance correlation with environmental variables, which are read year wise, from 2002 to 2018.Graphs are drawn using Charts.js.
+Home team has overall advantage as seen aggregated over the years.However Away team is seen to have more wins than Home in conditions of Low Humidity, Low Wind chill and when wind speeds are high.
+Home is at a clear advantage when when temperatures are low, winds are chilly and blow at low speed, and also when humidity is high.</p></h5>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="well">
+                            <h5>SELECT STATE:
+                            <select id="selDataset" onchange="optionChanged(this.value)"></select></h5>
+                        </div>
+						<div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">Statistics</h3>
+                            </div>
+                            <div id="year-metadata" class="panel-body"></div>
+                        </div>
+					</div>
+					<div id="ChartContainer" class="col-md-9">
+					  <canvas id="barChart" width="1000" height="450"></canvas>
+                    </div>
+					
+                </div>
+            </div>
+    
+
+    <script src="../static/index.js" type="text/javascript"></script>
+	<script src="../static/index1.js" type="text/javascript"></script>
+</body>
+</html>
